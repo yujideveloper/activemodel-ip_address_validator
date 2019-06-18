@@ -1,0 +1,35 @@
+require "active_model"
+require "resolv"
+
+module ActiveModel
+  module Validations
+    class IpAddressValidator < ::ActiveModel::EachValidator
+      PERMITTED_VERSION = %i[v4 v6].freeze
+
+      def initialize(options)
+        options[:version] ||= %i[v4 v6]
+        options[:version] = Array(options[:version])
+        super
+      end
+
+      def validate_each(record, attribute, value)
+        return if options[:version].include?(:v4) && ::Resolv::IPv4::Regex.match?(value)
+        return if options[:version].include?(:v6) && ::Resolv::IPv6::Regex.match?(value)
+
+        record_error(record, attribute, value)
+      end
+
+      def check_validity!
+        if options[:version].blank? || (options[:version] - PERMITTED_VERSION).present?
+          raise ArgumentError, "Either :v4 and/or :v6 must be supplied."
+        end
+      end
+
+      private
+
+      def record_error(record, attribute, value)
+        record.errors.add(attribute, :invalid, options.except(:version).merge!(value: value))
+      end
+    end
+  end
+end
