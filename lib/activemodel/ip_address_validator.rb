@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "activemodel/ip_address_validator/version"
 
 module ActiveModel
