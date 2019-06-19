@@ -2,6 +2,10 @@
 
 ActiveModel validator for ip address.
 
+[![Gem Version](https://badge.fury.io/rb/activemodel-ip_address_validator.svg)](https://badge.fury.io/rb/activemodel-ip_address_validator)
+[![Build Status](https://travis-ci.org/yujideveloper/activemodel-ip_address_validator.svg?branch=master)](https://travis-ci.org/yujideveloper/activemodel-ip_address_validator)
+[![Maintainability](https://api.codeclimate.com/v1/badges/110218584f1f8621f6ae/maintainability)](https://codeclimate.com/github/yujideveloper/activemodel-ip_address_validator/maintainability)
+
 ## Installation
 
 Add this line to your application's Gemfile:
