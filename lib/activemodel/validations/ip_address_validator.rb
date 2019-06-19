@@ -31,5 +31,11 @@ module ActiveModel
         record.errors.add(attribute, :invalid, options.except(:version).merge!(value: value))
       end
     end
+
+    module HelperMethods
+      def validates_ip_address_of(*attr_names)
+        validates_with IpAddressValidator, _merge_attributes(attr_names)
+       end
+    end
   end
 end
