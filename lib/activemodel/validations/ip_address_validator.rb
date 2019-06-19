@@ -20,9 +20,9 @@ module ActiveModel
       end
 
       def check_validity!
-        if options[:version].blank? || (options[:version] - PERMITTED_VERSION).present?
-          raise ArgumentError, "Either :v4 and/or :v6 must be supplied."
-        end
+        return if options[:version].present? && (options[:version] - PERMITTED_VERSION).blank?
+
+        raise ArgumentError, "Either :v4 and/or :v6 must be supplied."
       end
 
       private
