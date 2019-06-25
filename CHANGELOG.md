@@ -9,6 +9,7 @@
 
 * Introduce rubocop-rails
 * CI against ActiveModel v6.0.0.rc1
+* CI against Ruby 2.7.0-preview1
 
 
 ## 0.1.0 (2019-06-19)
