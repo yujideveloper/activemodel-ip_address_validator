@@ -8,6 +8,7 @@
 ### Misc
 
 * Introduce rubocop-rails
+* CI against ActiveModel v6.0.0.rc1
 
 
 ## 0.1.0 (2019-06-19)

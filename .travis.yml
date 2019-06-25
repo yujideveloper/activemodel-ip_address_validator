@@ -10,3 +10,7 @@ gemfile:
   - gemfiles/activemodel_5.0.gemfile
   - gemfiles/activemodel_5.1.gemfile
   - gemfiles/activemodel_5.2.gemfile
+  - gemfiles/activemodel_6.0.gemfile
+matrix:
+  allow_failures:
+    gemfile: gemfiles/activemodel_6.0.gemfile
