@@ -4,7 +4,7 @@ lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "activemodel/ip_address_validator/version"
 
-Gem::Specification.new do |spec|
+Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.name          = "activemodel-ip_address_validator"
   spec.version       = ActiveModel::IpAddressValidator::VERSION
   spec.authors       = ["Yuji Hanamura"]
@@ -37,4 +37,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.8"
   spec.add_development_dependency "rubocop", ">= 0.71.0"
   spec.add_development_dependency "rubocop-performance", ">= 1.3.0"
+  spec.add_development_dependency "rubocop-rails", ">= 2.0.1"
 end
