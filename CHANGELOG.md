@@ -1,5 +1,8 @@
 ## Unreleased
 
+
+## 0.1.1 (2019-06-26)
+
 ### Changes
 
 * Specify required ruby version to 2.4.0
