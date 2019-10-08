@@ -1,5 +1,8 @@
 ## Unreleased
 
+### Misc
+* CI against ActiveModel v6.0.0
+
 
 ## 0.1.1 (2019-06-26)
 
