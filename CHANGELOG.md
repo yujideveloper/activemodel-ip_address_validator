@@ -1,7 +1,9 @@
 ## Unreleased
 
 ### Misc
+
 * CI against ActiveModel v6.0.0
+* CI against Ruby 2.7
 
 
 ## 0.1.1 (2019-06-26)
